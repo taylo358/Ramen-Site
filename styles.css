@@ -5,26 +5,48 @@ body {
     font-size: 22px;
 }
 
+/*Home Page intro image */
 div.intro{
     background-color: #000000;
     background-image: url(images/homebg.png);
     background-size: cover;
-    background-repeat: none;
     width: 100%;
-    min-height: 1000px;
+    height: 100%;
+    position: absolute;
 }
+
 .white{
     color: #ffffff;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-weight: 400;
     font-size: 24px;
 }
+
+div.left{
+    display: inline-block;
+    text-align: left;
+}
+
+div.right{
+    display: inline-block;
+    text-align: right;
+}
+
+.headerLogo{
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 6px;
+}
+
 h1.logo{
     font-size: 60px;
     color: #fff;
     font-weight: 700;
     text-align: right;
     padding: 20px 0px 5px 0px;
+    margin-top: 20%;
+    letter-spacing: 3px;
+    
 }
 
 p.logo-label{
@@ -32,3 +54,16 @@ p.logo-label{
     font-weight: 300;
     text-align: right;
 }
+
+/*iv.menu{
+    position: fixed;
+}*/
+
+/*div.barBg{
+    background-color: #000000;
+    background-image: url(images/bar.jpg);
+    height: 100%;
+    width: 50%;
+    position: absolute;
+
+}*/
