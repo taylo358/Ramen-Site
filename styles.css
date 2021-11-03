@@ -1,13 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&display=swap');
 
+/*Make Animation Smoother:
+animation-timing-function: linear;
+*/
+
+/* "Shortland"? @keyframes duration | timing-function | delay | name 
+animation: 3s linear .1s colorIt;*/
+
+
 body {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size: 22px;
+    color: #fff;
+    background-color: #171616 !important;
+}
+
+.navMenu a, .navMenu a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+h4.sectionTitle{
+    color: #bdc3c7;
+    font-size: 20px;
+    padding: 5px 0 5px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 0 24%;
+}
+
+p.sectionText{
+    padding: 0 24%;
 }
 
 /*Home Page intro image */
 div.intro{
-    background-color: #000000;
     background-image: url(images/homebg.png);
     background-size: cover;
     width: 100%;
@@ -31,39 +57,212 @@ div.right{
     display: inline-block;
     text-align: right;
 }
-
+div.center{
+    display: block;
+    text-align: center;
+}
 .headerLogo{
     font-weight: 700;
     font-size: 30px;
     letter-spacing: 6px;
 }
+.headerRow{
+    height: 100%;
+}
 
-h1.logo{
+p.logo{
     font-size: 60px;
     color: #fff;
     font-weight: 700;
     text-align: right;
-    padding: 20px 0px 5px 0px;
-    margin-top: 20%;
+    padding: 20px 30% 5px 0px;
+    margin-top: 25%;
     letter-spacing: 3px;
     
 }
 
+
 p.logo-label{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 300;
     text-align: right;
+    padding: 0 30% 0 0;
 }
 
-/*iv.menu{
+/*Navigation Menu Animation*/
+@keyframes menuSlide {
+    0% {left: -50%;}
+    25% {left: -40%;}
+    50% {left: -30%;}
+    75% {left: -15%;}
+    100% {left: 0%;}
+}
+
+/*Display side Menu*/
+div.menuShow{
     position: fixed;
-}*/
-
-/*div.barBg{
-    background-color: #000000;
-    background-image: url(images/bar.jpg);
+    width: 40%;
     height: 100%;
-    width: 50%;
-    position: absolute;
+    background-color: #171616;
+    animation-name: menuSlide;
+    animation-duration: .8s;
+    left: 0%;
+    animation-timing-function: linear;
+    padding: 8% 0 0 0;
+    z-index: 40;
+}
 
-}*/
+ul.navMenu li{
+    padding: 10px 0 ;
+    list-style-type: none;
+}
+
+/*Hide Side Menu*/
+div.menuHide{
+    display: none;
+}
+
+.menuIcon {
+    position: fixed;
+    left: 5%;
+    z-index: 42;
+}
+
+.menuLogo{
+    position: fixed;
+    display: block;
+    right: 0%;
+    letter-spacing: 2px;
+}
+
+a.menuIcon{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a.menuIcon:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.sushiBg{
+    width: 100%;
+    height: 100%;
+    background: url(images/sushibg.jpg);
+    background-size: cover;
+    background-repeat: none;  
+    display: inline-block;
+    top: 100%;
+}
+
+.counterBg{
+    width: 100%;
+    height: 100%;
+    background: url(images/counterbg.jpg);
+    background-size: cover;
+    background-repeat: none;  
+    display: inline-block;
+    top: 100%;
+}
+
+.sideSection{
+    text-align: right;
+    padding: 10% 5% 0 2%;
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+}
+
+a.scroll{
+    top: 92%;
+    position: absolute;
+    z-index: 37;
+    display: block;
+    text-decoration: none;
+}
+
+a.scroll:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+div.footer{
+    padding: 2% 0;
+}
+
+/*-----------------*/
+/*-----------------*/
+/*-----------------*/
+/*Smaller Devices*/
+/*-----------------*/
+/*-----------------*/
+/*-----------------*/
+
+@media only screen and (max-width:600px) {
+    
+    /*Navigation Menu*/
+    div.menuShow{
+        position: fixed;
+        width: 50%;
+        height: 100%;
+        background-color: #171616;
+        animation-name: menuSlide;
+        animation-duration: .8s;
+        left: 0%;
+        animation-timing-function: linear;
+        padding: 8% 0 0 0;
+    }
+
+    .menuLogo{
+        display: none;
+    }
+
+    /*Hide Logo on Mobile*/
+    p.headerLogo{
+        display: none;
+    }
+
+    p.logo-label{
+        font-size: 18px;
+    }
+    a.scroll{
+        display: none;
+    }
+    .sushiBg{
+        width: 100%;
+        height: 50%;
+        background: url(images/sushibg.jpg);
+        background-size: cover;
+        background-repeat: none;  
+        display: inline-block;
+        top: 100%;
+    }
+
+    .counterBg{
+        width: 100%;
+        height: 50%;
+        background: url(images/counterbg.jpg);
+        background-size: cover;
+        background-repeat: none;  
+        display: inline-block;
+        top: 100%;
+    }
+
+    .sideSection {
+        text-align: right;
+        padding: 10% 5% 0 2%;
+        height: 50%;
+        width: 100%;
+        z-index: 30;
+    }
+
+    h4.sectionTitle{
+        padding: 0%;
+    }
+    p.sectionText{
+        padding: 0%;
+    }
+
+    
+}
+
