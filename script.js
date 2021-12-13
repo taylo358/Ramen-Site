@@ -67,5 +67,5 @@ function enableScroll() {
 
 //Scroll Button//
 function scrollPage(){
-    window.scrollBy(0,-100);
+  window.scrollTo(0,document.querySelector(".sushiBg").scrollHeight);
 }
