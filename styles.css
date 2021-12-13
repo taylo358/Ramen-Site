@@ -117,6 +117,12 @@ ul.navMenu li{
     list-style-type: none;
 }
 
+ul.navMenu a:hover{
+    border-color: #bdc3c7;
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
 /*Hide Side Menu*/
 div.menuHide{
     display: none;
@@ -131,7 +137,7 @@ div.menuHide{
 .menuLogo{
     position: fixed;
     display: block;
-    right: 2%;
+    right: 0%;
     letter-spacing: 2px;
 }
 
@@ -184,6 +190,10 @@ a.scroll{
 a.scroll:hover{
     text-decoration: none;
     color: #fff;
+}
+
+div.locationSection {
+    padding-top: 10%;
 }
 
 div.footer{
@@ -254,6 +264,10 @@ div.footer{
         height: 50%;
         width: 100%;
         z-index: 30;
+    }
+
+    h4.locationTitle{
+        padding: 5% 0 5% 0 !important;
     }
 
     h4.sectionTitle{
