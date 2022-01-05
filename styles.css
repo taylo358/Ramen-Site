@@ -101,11 +101,11 @@ p.logo-label{
 /*Display side Menu*/
 div.menuShow{
     position: fixed;
-    width: 40%;
+    width: 15%;
     height: 100%;
     background-color: #171616;
     animation-name: menuSlide;
-    animation-duration: .8s;
+    animation-duration: .5s;
     left: 0%;
     animation-timing-function: linear;
     padding: 8% 0 0 0;
